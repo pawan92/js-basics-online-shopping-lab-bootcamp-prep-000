@@ -21,16 +21,25 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-   if (cart.length===0) {
-     return console.log("Your shopping cart is empty.")
-   } else{
-     for(var i=0;i<cart.length;i++){
-       console.log (i, cart[i]);
-       
-     }
-     
-     
+   if (cart.length === 0) {
+   console.log( "Your shopping cart is empty.")}
+   else {
+   var myStr = "In your cart, you have ";
+  for (var i = 0; i < cart.length; i ++) {
+    var item = cart[i];
+     var key = Object.keys(item);
+     var price = item[key];
+     if (cart.length === 1) {
+       myStr += `${key} at $${price}.`;
+     } else if (i === (cart.length - 1)) {
+       myStr += `and ${key} at $${price}.`;
+     } else if (cart.length === 2) {
+       myStr += `${key} at $${price} `;
+     } else
+     { myStr += `${key} at $${price}, `;}
    }
+ 
+   console.log(str); }
 }
 
 function total() {
