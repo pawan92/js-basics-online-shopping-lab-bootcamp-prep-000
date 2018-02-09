@@ -39,7 +39,7 @@ function viewCart() {
      { myStr += `${key} at $${price}, `;}
    }
  
-   console.log(str); }
+   console.log(myStr); }
 }
 
 function total() {
